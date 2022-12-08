@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <article class="gallery">
+        <div class="thumb">
+            <!--             <figure>
+                <img src="img/01.jpg">
+            </figure> -->
+        </div>
+
+        <div class="detail">
+            <article>
+                <figure>
+                    <img src="img/01.jpg">
+                    <figcaption>
+                        <h2> 이미지 명</h2>
+                        디테일 설명
+                    </figcaption>
+                </figure>
+            </article>
+        </div>
+    </article>
+
+    <style>
+        .figure {
+            margin: 0;
+        }
+
+        .gallery {
+            width: 70%;
+            margin: 200px auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .gallery .thumb {
+            width: 20%;
+        }
+
+        .gallery .thumb figure img {
+            width: 130px;
+            transition: all 0.2s linear;
+        }
+
+        .gallery .thumb figure:hover img {
+            transform: scale(2);
+            border-radius: 65px;
+        }
+
+        .gallery .detail article {
+            width: 80%;
+            padding: 0 5%;
+        }
+
+        .detail figure img {
+            animation: ani 0.5s ease-in-out;
+            
+        }
+
+        @keyframes ani {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+    </style>
+
+    <script>
+        let data = [
+            { url: 'img/01.jpg', title: '이미지 01', detail: 'ㅇㅇㅇㅇ01' },
+            { url: 'img/02.jpg', title: '이미지 02', detail: 'ㅇㅇㅇㅇ02' },
+            { url: 'img/03.jpg', title: '이미지 03', detail: 'ㅇㅇㅇㅇ03' },
+            { url: 'img/04.jpg', title: '이미지 04', detail: 'ㅇㅇㅇㅇ04' },
+            { url: 'img/05.jpg', title: '이미지 05', detail: 'ㅇㅇㅇㅇ05' },
+            { url: 'img/06.jpg', title: '이미지 06', detail: 'ㅇㅇㅇㅇ06' },
+            { url: 'img/07.jpg', title: '이미지 07', detail: 'ㅇㅇㅇㅇ07' },
+            { url: 'img/08.jpg', title: '이미지 08', detail: 'ㅇㅇㅇㅇ08' },
+            { url: 'img/09.jpg', title: '이미지 09', detail: 'ㅇㅇㅇㅇ09' },
+            { url: 'img/10.jpg', title: '이미지 10', detail: 'ㅇㅇㅇㅇ10' }
+        ]
+
+
+
+        const aa = document.querySelector('.thumb');
+
+        tag = '';
+        data.forEach(function (v) {
+            tag += `<figure>
+                <img src="${v.url}">
+                </figure>`;
+        });
+        aa.innerHTML = tag;
+
+
+        const bb = document.querySelectorAll('.thumb figure');
+        const cc = document.querySelector('.detail article');
+
+        tag1 = '';
+        bb.forEach(function (img, key) {
+            img.onclick = function () {
+                tag1 =
+                    `<figure>
+                    <img src="${data[key].url}">
+                    <figcaption>
+                        <h2> ${data[key].title} </h2>
+                        ${data[key].detail}
+                        </figcaption>
+                        </figure>`;
+                cc.innerHTML = tag1;
+            }
+        });
+
+
+
+
+
+    </script>
+</body>
+
+</html>

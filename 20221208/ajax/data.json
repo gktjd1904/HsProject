@@ -1,0 +1,64 @@
+{
+    "data": [
+        {
+            "id": "1",
+            "url": "../img/01.jpg",
+            "title": "이미지01",
+            "detail": "내용01"
+        },
+        {
+            "id": "2",
+            "url": "../img/02.jpg",
+            "title": "이미지02",
+            "detail": "내용02"
+        },
+        {
+            "id": "3",
+            "url": "../img/03.jpg",
+            "title": "이미지03",
+            "detail": "내용03"
+        },
+        {
+            "id": "4",
+            "url": "../img/04.jpg",
+            "title": "이미지04",
+            "detail": "내용04"
+        },
+        {
+            "id": "5",
+            "url": "../img/05.jpg",
+            "title": "이미지05",
+            "detail": "내용05"
+        },
+        {
+            "id": "6",
+            "url": "../img/06.jpg",
+            "title": "이미지06",
+            "detail": "내용06"
+        },
+        {
+            "id": "7",
+            "url": "../img/07.jpg",
+            "title": "이미지07",
+            "detail": "내용07"
+        },
+        {
+            "id": "8",
+            "url": "../img/08.jpg",
+            "title": "이미지08",
+            "detail": "내용08"
+        },
+        {
+            "id": "9",
+            "url": "../img/09.jpg",
+            "title": "이미지09",
+            "detail": "내용09"
+        },
+        {
+            "id": "10",
+            "url": "../img/10.jpg",
+            "title": "이미지10",
+            "detail": "내용10"
+        }
+    ]
+}
