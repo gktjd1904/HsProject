@@ -6,7 +6,7 @@ fetch('./data.json')
         init(gallery.data)
     });
 
-num = 0;
+
 
 function init(data) {
     const elGallery = document.querySelector('.gallery div');
@@ -15,15 +15,15 @@ function init(data) {
         elGallery.innerHTML += `<img src=${v.url}>`;
     });
 
-    const img = document.querySelectorAll('.img');
+    const aaa = document.querySelectorAll('.img img');
     const pop = document.querySelector('.popup')
 
-    img.forEach(function (btn, key) {
+    aaa.forEach(function (btn, key) {
         btn.onclick = function () {
-            num =key;
             pop.classList.add('action');
             dataChange(key);
-            console.log(num);
+            num = key;
+            console.log(key);
         }
     })
 
@@ -32,15 +32,33 @@ function init(data) {
             pop.classList.remove('action');
     }
 
+
+
     function dataChange(n) {
         const popcon = document.querySelector('.popup article');
         popcon.innerHTML = `<h2>${data[n].title}</h2>
                             <figure>
-                                <img src="${data[n].url}">
+                                <img src=${data[n].url}>
                                 <figcaption> ${data[n].detail} </figcaption>
-                            </figure>`;
+                            </figure>`
     }
 
+    const btn = document.querySelectorAll('.popup button');
 
-
+    num = 0;
+    btn.forEach(function (b, k) {
+        b.onclick = function () {
+            console.log(num)
+            if (k == 0 && num > 0) {
+                num--;
+            } else if (k == 1 && num < 9) {
+                num++;
+            } else if (num == 9) {
+                alert('마지막 사진입니다.');
+            } else if (num == 0) {
+                alert('첫번째 사진입니다.');
+            }
+            dataChange(num);
+        }
+    })
 }

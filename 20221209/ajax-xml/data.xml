@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<items>
+    <item>
+        <title> 이미지 01</title>
+        <url>../img/01.jpg</url>
+        <detail>어쩌구저쩌구...01</detail>
+    </item>
+    <item>
+        <title> 이미지 02</title>
+        <url>../img/02.jpg</url>
+        <detail>어쩌구저쩌구...02</detail>
+    </item>
+    <item>
+        <title> 이미지 03</title>
+        <url>../img/03.jpg</url>
+        <detail>어쩌구저쩌구...03</detail>
+    </item>
+</items>

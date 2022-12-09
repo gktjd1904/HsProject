@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+</head>
+
+<body>
+
+    <article class="faq">
+        <h2>FAQ</h2>
+        <ul>
+            <li>
+                Q.질문 1
+                <div>A. 답변 1</div>
+                <div>A. 답변 1</div>
+                <div>A. 답변 1</div>
+                <div>A. 답변 1</div>
+                <div>A. 답변 1</div>
+                <div>A. 답변 1</div>
+                <div>A. 답변 1</div>
+                <div>A. 답변 1</div>
+                <div>A. 답변 1</div>
+                <div>A. 답변 1</div>
+                <div>A. 답변 1</div>
+                <div>A. 답변 1</div>
+                <div>A. 답변 1</div>
+                <div>A. 답변 1</div>
+                <div>A. 답변 1</div>
+                <div>A. 답변 1</div>
+                <div>A. 답변 1</div>
+                <div>A. 답변 1</div>
+                
+            </li>
+            <li>
+                Q.질문 2
+                <div>A. 답변 2</div>
+            </li>
+            <li>
+                Q.질문 3
+                <div>A. 답변 3</div>
+            </li>
+        </ul>
+    </article>
+    <script>
+        //hide() == css에서 display = none이랑 같다.
+        //show() == css에서 display = block랑 같다.
+        //slideToggle == toggle랑 같다.
+
+        $('.faq div').hide();
+        $('.faq li').click(function () {
+            $(this).find('div').slideToggle();
+        })
+    </script>
+
+
+
+
+
+    <article class="fade">
+        <h2> Fade 슬라이드</h2>
+        <div>
+            <img src="../img/01.jpg">
+            <img src="../img/02.jpg">
+            <img src="../img/03.jpg">
+            <img src="../img/04.jpg">
+            <img src="../img/05.jpg">
+            <img src="../img/06.jpg">
+            <img src="../img/07.jpg">
+            <img src="../img/08.jpg">
+            <img src="../img/09.jpg">
+            <img src="../img/10.jpg">
+        </div>
+    </article>
+
+    <style>
+        .fade div {
+            position: relative;
+            width: 400px;
+        }
+
+        .fade div img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            /* display: none; */
+            width: 100%;
+        }
+    </style>
+
+    <script>
+        $('.fade img').not(':first').hide();
+
+        let num = 0, fadeInterval;
+        fadeInterval = setInterval(function () {
+
+            $('.fade img').eq(num).fadeOut(500); //()안에 속도값
+            /*             if (num < ($('.fade img').length) - 1) {
+                            num++;
+                        } else {
+                            num = 0;
+                        } */
+            (num < ($('.fade img').length) - 1) ? num++ : num = 0;
+            $('.fade img').eq(num).fadeIn(500);
+
+        }, 1000)
+
+
+
+
+
+
+
+        /*
+                $('.fade img').eq(num).fadeOut(1000); //()안에 속도값
+                    num++;
+                    $('.fade img').eq(num).fadeIn(1000); */
+
+
+        //두번째 -> 0,1
+        //세번째 -> 1,2
+        //첫번째 -> 2,0
+
+        //두번째 -> 0,1
+        //세번째 -> 1,2
+        //첫번째 -> 2,0
+
+        //두번째 -> 0,1
+        //세번째 -> 1,2
+        //첫번째 -> 2,0
+    </script>
+
+    <article class="effect">
+        <h2>Effect</h2>
+        <div>
+            blind, bounce, clip, drop, explode, fade,
+            fold, highlight, puff, pulsate, scale,
+            shake, size, slide, transfer
+        </div>
+
+        <style>
+            .effect {
+                margin: 400px 0;
+            }
+
+            .effect div {
+                border: 1px solid #000;
+                padding: 40px;
+                width: 400px;
+            }
+
+            .ui-effects-transfer {
+                border: 11px dotted gray;
+            }
+        </style>
+    </article>
+
+    <script>
+        //scal(percent:50), transfer, size(width, height) = option이 들어가야한다
+        let option = { to: ".effect h2", className: "ui-effects-transfer" };
+        //$('.effect > div').effect('transfer', option, 600);
+
+
+        $('.effect div').animate({marginLeft: 200,}, 3000, 'easeOutBounce');
+        $('.effect div').animate({marginLeft: 0,}, 3000, 'easeOutBounce');
+
+        slideToggle, slideDown, slidUp
+        fadeIn, fadeOut, fadeToggle
+        animate,
+        effect
+    </script>
+</body>
+
+</html>
