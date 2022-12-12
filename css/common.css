@@ -39,12 +39,7 @@ header .cont {
 }
 
 .hd__btn div.active {
-    z-index: 1;
-    position: absolute;
-    width: 100%;
     background-color: #000;
-    height: 4px;
-    right: 0;
 }
 
 .hd__btn div:first-child {
@@ -95,20 +90,18 @@ section {
     right: 0;
     top: 0;
     background-color: #fff;
-    width: 30%;
+    width: 0%;
     height: 100vh;
-    z-index: 0;
     display: none;
+    transition: all 200ms ease;
 }
 
 .menu.active {
     position: absolute;
     right: 0;
     top: 0;
-    background-color: #fff;
     width: 30%;
-    height: 100vh;
-    z-index: 0;
+    background-color: #fff;
     display: block;
 }
 
@@ -121,13 +114,26 @@ section {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
 }
 
 .menu .inner__menu ul li {
     padding: 25px 0;
 }
 
+.menu .inner__menu ul li a::after {
+    display: block;
+    content: '';
+    border-bottom: solid 6px #000;
+    opacity: 0;
+    left: 0;
+    width: 0;
+    transition: all 300ms ease-in-out;
+}
+
+.menu .inner__menu ul li a:hover::after {
+    opacity: 1;
+    width: 100%;
+}
 
 .menu .inner__menu ul li a {
     color: #000;

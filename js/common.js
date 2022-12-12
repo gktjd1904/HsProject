@@ -5,7 +5,7 @@ window.onload = function () {
 
 function sayHello() {
     let ell = document.querySelector('.menu');
-    let elll = document.querySelector('.hd__btn div');
+    let elll = document.querySelector('.hd__btn div:first-child');
     console.log("Hello");
     ell.classList.toggle('active');
     elll.classList.toggle('active');
