@@ -5,7 +5,7 @@ $('header').load('./inc.html header > div', head);
 let idx = sessionStorage.idx || 5;
 
 function head() {
-    console.log(sessionStorage.idx);
+   /*  console.log(sessionStorage.idx); */
 
     /* $(this).addClass('aaa'); */
     $('header .menu a').eq(idx).addClass('aaa');

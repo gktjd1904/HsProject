@@ -29,7 +29,7 @@ body {
     font-weight: 700;
     font-size: 160px;
     color: #fff;
-    
+
 }
 
 .about01__cont p {
@@ -63,9 +63,18 @@ body {
     color: #fff;
 }
 
-.about02__text h1 {
+.about02__text p {
     font-size: 160px;
     font-weight: 300;
+    opacity: 0;
+    transition: 1s;
+    transform: rotateX(90deg);
+
+}
+
+.about02__text p.aaaa {
+    opacity: 1;
+    transform: rotateX(0deg)
 }
 
 .bg__img img {
@@ -230,6 +239,7 @@ body {
     .right-text ol li {
         margin-bottom: 30px;
     }
+
     .right-text {
         margin-top: 55px;
     }
@@ -240,7 +250,7 @@ body {
         margin-bottom: 462px
     }
 
-    .about04__cont img{
+    .about04__cont img {
         width: 100%;
     }
 

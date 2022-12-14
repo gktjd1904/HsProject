@@ -1,11 +1,11 @@
 window.onload = function () {
-    let el = document.getElementById("title-div");
-    el.onclick = sayHello;
+    const a = document.getElementById("title-div");
+    a.onclick = menu;
 }
 
-function sayHello() {
-    let ell = document.querySelector('.menu');
-    let elll = document.querySelector('.hd__btn div:first-child');
-    ell.classList.toggle('active');
-    elll.classList.toggle('active');
+function menu() {
+    const b = document.querySelector('.menu');
+    const c = document.querySelector('.hd__btn div:first-child');
+    b.classList.toggle('active');
+    c.classList.toggle('active');
 }
