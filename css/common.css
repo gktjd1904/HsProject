@@ -124,8 +124,6 @@ section {
     display: block;
     content: '';
     border-bottom: solid 6px #000;
-    opacity: 0;
-    left: 0;
     width: 0;
     transition: all 300ms ease-in-out;
 }
@@ -141,6 +139,11 @@ section {
     position: relative;
     font-size: 80px;
     line-height: 1.5;
+}
+
+.menu .inner__menu ul li a.aaa {
+    color: pink;
+    /* background-color: black; */
 }
 
 .menu p {
