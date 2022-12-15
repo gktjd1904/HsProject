@@ -14,7 +14,11 @@ label {
 
 .contact01 {
     padding-top: 200px;
+
 }
+
+
+
 
 .contact01_text h1 {
     font-size: 160px;
@@ -27,6 +31,16 @@ label {
 .cont02,
 .cont03 {
     padding-top: 230px;
+}
+
+.cont01 {
+    opacity: 0;
+    transition: 1s;
+    transform: translateY(500px);
+}
+.cont01.aniup {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 

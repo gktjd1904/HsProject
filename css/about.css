@@ -59,7 +59,7 @@ body {
 
 .about02__text {
     position: absolute;
-    top: 27%;
+    top: 20%;
     color: #fff;
 }
 
@@ -68,13 +68,13 @@ body {
     font-weight: 300;
     opacity: 0;
     transition: 1s;
-    transform: rotateX(90deg);
+    transform: rotateX(45deg);
 
 }
 
 .about02__text p.aaaa {
     opacity: 1;
-    transform: rotateX(0deg)
+    transform: rotateX(0deg);
 }
 
 .bg__img img {
@@ -93,6 +93,7 @@ body {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    gap: 10%;
 }
 
 .about03__cont:last-child {
@@ -101,56 +102,66 @@ body {
 
 .left-text {
     width: 50%;
+}
+
+.right-text {
+    width: 50%;
+}
+
+
+.left-text h2 {
     opacity: 0;
-    transform: translateX(-200px);
+    transition: 2s;
+    transform: translateX(-100%);
+}
+.left-text h2.aaa {
+    opacity: 1;
+    transform: translateX(0%);
 }
 
 .left-text p {
     margin-top: 80px;
     font-size: 40px;
     font-weight: 300;
+    opacity: 0;
+    transition: 2s;
+    transform: translateX(-100%);
+}
+.left-text p.aaa {
+    opacity: 1;
+    transform: translateX(0%);
 }
 
-.right-text {
-    width: 50%;
-    opacity: 0;
-    transform: translateY(150px);
 
+
+.right-text h5 {
 }
 
 .right-text p {
     margin-top: 15px;
     color: #888;
-
 }
+
 
 .right-text ol li {
     margin-bottom: 70px;
     font-size: 30px;
-
+    opacity: 0;
+    transition: 1s;
+    transform: translateX(100%);
 }
 
-
-.leftslide {
+.right-text ol li.rightSlide {
     opacity: 1;
-    transform: translateX(0px);
+    transform: translateX(0%);
 }
-
-.rightslide {
-    opacity: 1;
-    transform: translateY(0px);
-}
-
-
-
-
 
 .about03 h2 {
     font-size: 80px;
     font-weight: 600;
     line-height: 1.2em;
-
 }
+
 
 .about03 .left-text,
 .about03 .right-text {
@@ -171,7 +182,7 @@ body {
     align-items: center;
     justify-content: flex-start;
     gap: 2%;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .about04__cont p {
