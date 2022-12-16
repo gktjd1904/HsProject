@@ -72,6 +72,7 @@ body {
 
 }
 
+
 .about02__text p.aaaa {
     opacity: 1;
     transform: rotateX(0deg);
@@ -114,7 +115,7 @@ body {
     transition: 2s;
     transform: translateX(-100%);
 }
-.left-text h2.aaa {
+.left-text h2.aaaa {
     opacity: 1;
     transform: translateX(0%);
 }
@@ -127,7 +128,7 @@ body {
     transition: 2s;
     transform: translateX(-100%);
 }
-.left-text p.aaa {
+.left-text p.aaaa {
     opacity: 1;
     transform: translateX(0%);
 }
@@ -151,7 +152,7 @@ body {
     transform: translateX(100%);
 }
 
-.right-text ol li.rightSlide {
+.right-text ol li.aaaa {
     opacity: 1;
     transform: translateX(0%);
 }

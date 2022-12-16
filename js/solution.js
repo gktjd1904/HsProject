@@ -1,7 +1,5 @@
 
 
-
-
 const a = document.querySelectorAll('.scroll');
 
 let strPosition = ['fixed', 'absolute', 'relative', 'stickey'];
@@ -22,13 +20,3 @@ a.forEach(function (el, key) {
     activeArray.push(pos);
 })
 
-
-window.addEventListener('scroll', function () {
-console.log(activeArray)
-    a.forEach(function (p, k) {
-        if (activeArray[k] - window.innerHeight * 0.8 < window.pageYOffset) {
-            a[k].classList.add('aaaa');
-        }
-    })
-
-}) 

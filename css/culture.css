@@ -69,7 +69,22 @@ p {
     position: absolute;
     right: 13%;
     bottom: 0;
+    animation: aa 1s ease-out forwards;
 }
+
+@keyframes aa {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
 
 .cont__img img {
     position: absolute;
@@ -124,17 +139,20 @@ p {
     width: 100%;
 }
 
-.top {
+.top,
+.bottom {
     width: 100%;
 }
 
-.top ul {
+.top ul,
+.bottom ul {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
 }
 
-.top li {
+.top li,
+.bottom li {
     width: 33%;
     padding: 0 75px;
 }
@@ -146,38 +164,52 @@ p {
     border-bottom: 1px solid #333;
 }
 
-.top li:nth-child(4),
-.top li:nth-child(5),
-.top li:nth-child(6) {
+.bottom li:nth-child(1),
+.bottom li:nth-child(2),
+.bottom li:nth-child(3) {
     padding-top: 75px;
 }
 
 .top li:nth-child(1),
-.top li:nth-child(4) {
+.bottom li:nth-child(1) {
     border-right: 1px solid #333;
 }
 
 .top li:nth-child(2),
-.top li:nth-child(5) {
+.bottom li:nth-child(2) {
     border-right: 1px solid #333;
 }
 
-.top img {
+.top img,
+.bottom img {
     max-height: 110px;
     display: block;
     margin-bottom: 25px;
 }
 
-.top h3 {
+
+
+
+
+.top h3,
+.bottom h3 {
     font-size: 50px;
+
 }
 
-.top p {
+
+
+
+.top p,
+.bottom p {
     font-size: 40px;
     color: #888;
     font-weight: 200;
     padding-top: 8px;
+
 }
+
+
 
 /* =================================================================== */
 /* =================================================================== */
@@ -194,7 +226,15 @@ p {
 .culture03 h1 {
     font-size: 160px;
     font-weight: 300;
+    opacity: 1;
+    transition: 1s;
+    transform: rotateX(90deg);
 }
+
+.culture03 h1.ani {
+    transform: rotateX(0deg);
+}
+
 
 
 /* =================================================================== */
@@ -220,6 +260,14 @@ p {
     font-size: 160px;
     font-weight: 700;
     line-height: 1.2em;
+    opacity: 0;
+    transition: 1s;
+    transform: translateY(100px);
+}
+
+.title__04 h1.ani {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .cont__04 {
@@ -232,12 +280,28 @@ p {
 
 .cont__04 h2 {
     font-size: 80px;
+    opacity: 0;
+    transition: 1s;
+    transform: translateY(100px);
+}
+
+.cont__04 h2.ani {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .cont__04 p {
     margin-top: 50px;
     font-size: 40px;
     font-weight: 300;
+    opacity: 0;
+    transition: 1s;
+    transform: translateY(100px);
+}
+
+.cont__04 p.ani {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .bg__04 {
@@ -292,6 +356,14 @@ p {
 .title__05 h1 {
     font-size: 160px;
     line-height: 1.2em;
+    opacity: 0;
+    transition: 2s;
+    transform: translateY(100px);
+}
+
+.title__05 h1.ani    {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .content__05 {
