@@ -1,5 +1,15 @@
 
 
+
+var swiper = new Swiper(".mySwiper", {
+    /* spaceBetween: 30, */
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});
+
+
 const a = document.querySelectorAll('.scroll');
 
 let strPosition = ['fixed', 'absolute', 'relative', 'stickey'];
@@ -21,7 +31,7 @@ a.forEach(function (el, key) {
 })
 
 window.addEventListener('scroll', function () {
-    console.log(activeArray)
+    /* console.log(activeArray) */
     a.forEach(function (p, k) {
         if (activeArray[k] - window.innerHeight * 0.7 < window.pageYOffset) {
             a[k].classList.add('ani');
