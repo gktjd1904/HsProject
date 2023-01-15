@@ -1,11 +1,16 @@
-window.onload = function () {
-    const a = document.getElementById("title-div");
-    a.onclick = menu;
-}
 
-function menu() {
-    const b = document.querySelector('.menu');
-    const c = document.querySelector('.hd__btn div:first-child');
-    b.classList.toggle('active');
-    c.classList.toggle('active');
-}
+
+const MENU = document.querySelector(".menu");
+const MENUBTN = document.querySelector(".hd__btn");
+const BTN1 = document.querySelector(".hd__btn div:first-child");
+const BTN2 = document.querySelector(".hd__btn div:last-child");
+
+MENUBTN.addEventListener('click', function () {
+    MENU.classList.toggle('sss');
+    BTN1.classList.toggle('active');
+    BTN2.classList.toggle('active');
+})
+
+console.log(BTN1)
+console.log(BTN2)
+

@@ -21,6 +21,9 @@ header .cont {
     width: 236px;
 }
 
+
+
+
 .hd__btn {
     z-index: 999;
     position: relative;
@@ -29,17 +32,22 @@ header .cont {
 }
 
 .hd__btn div {
-    z-index: 1;
     position: absolute;
     width: 100%;
     background-color: #fff;
     height: 4px;
     right: 0;
-
+    transform: rotate(0deg);
+    transition: 0.7s;
 }
 
-.hd__btn div.active {
+.hd__btn div:first-child.active {
     background-color: #000;
+    transform: translateY(8px) rotate(45deg);
+}
+.hd__btn div:last-child.active {
+    background-color: #000;
+    transform: translateY(-8px) rotate(-45deg);
 }
 
 .hd__btn div:first-child {
@@ -48,6 +56,10 @@ header .cont {
 
 .hd__btn div:last-child {
     bottom: 0;
+}
+
+.hd__btn:hover {
+    cursor: pointer;
 }
 
 .hd__menu {
@@ -74,81 +86,44 @@ section {
     font-weight: 100;
 }
 
-.hd__btn:hover {
-    cursor: pointer;
-    /* background-color: aqua; */
-}
 
-.hd__btn:hover div:last-child {
-    /* background-color: red; */
+
+/* .hd__btn:hover div:last-child {
     width: 60%;
     transition: 0.5s
-}
+} */
 
 .menu {
-    position: absolute;
-    right: -1000px;
-    top: 0px;
-    background-color: #fff;
+    width: 0px;
     height: 100vh;
-    width: 0%;
-    transition: 1.5s;
-
-
-}
-
-.menu.active {
+    position: absolute;
     right: 0;
     top: 0;
-    width: 30%;
-    min-width: 590px;
-
+    background-color: white;
+    z-index: 998;
+    transition: 0.7s;
 }
 
-@media screen and (max-width : 1023px) {
-    .menu.active {
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .menu.active {
-        padding: 60px 20px 60px 20px;
-    }
+.menu.sss {
+    width: 600px;
+    height: 100vh;
 }
 
 .inner__menu {
-    background-color: #fff;
-    position: absolute;
+
+
     height: 100%;
-    width: 100%;
-    padding: 65px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
 }
+
+.inner__menu ul {
+    margin: 70px;
+}
+
+
 
 .menu .inner__menu ul li {
     padding: 25px 0;
 }
-
-.menu .inner__menu ul li a::after {
-    display: block;
-    content: '';
-    border-bottom: solid 6px #000;
-    width: 0;
-    transition: all 300ms ease-in-out;
-    opacity: 0;
-}
-
-.menu .inner__menu ul li a:hover::after {
-    opacity: 1;
-    width: 100%;
-}
-
-
-
-
 
 
 .menu .inner__menu ul li a {
@@ -171,9 +146,20 @@ section {
     font-weight: 100;
     color: #aaaaaa;
     margin-top: auto;
-
+    margin-left: 10%;
 }
 
+@media screen and (max-width : 1023px) {
+    .menu.active {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .menu.active {
+        padding: 60px 20px 60px 20px;
+    }
+}
 
 
 /*==============================================================================*/

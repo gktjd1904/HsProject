@@ -7,6 +7,7 @@ let idx = sessionStorage.idx || 5;
 function head() {
 
     $('header .menu a').eq(idx).addClass('aaa');
+    
     $('header .menu li').click(function () {
         let idx = $(this).index();
         sessionStorage.idx = idx;
